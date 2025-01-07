@@ -24,7 +24,7 @@
     <!-- Theme Script -->
     <script
       src="js/theme-script.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Bootstrap CSS -->
@@ -43,11 +43,14 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
 
-    <!-- Datatable CSS -->
-    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="css/select2.min.css" />
+
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+
+    <!-- Bootstrap Tagsinput CSS -->
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css" />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -682,12 +685,16 @@
                     </ul>
                   </li>
                   <li class="submenu">
-                    <a href="javascript:void(0);"
+                    <a href="javascript:void(0);" class="subdrop active"
                       ><i class="ti ti-users"></i><span>Teachers</span
                       ><span class="menu-arrow"></span
                     ></a>
                     <ul>
-                      <li><a href="teacher-grid.html">All Teachers</a></li>
+                      <li>
+                        <a href="teacher-grid.html" class="active"
+                          >All Teachers</a
+                        >
+                      </li>
                       <li><a href="teachers.html">Teacher List</a></li>
                       <li>
                         <a href="teacher-details.html">Teacher Details</a>
@@ -812,18 +819,14 @@
                     >
                   </li>
                   <li class="submenu">
-                    <a href="javascript:void(0);" class="subdrop active"
+                    <a href="javascript:void(0);"
                       ><i class="ti ti-building-fortress"></i><span>Hostel</span
                       ><span class="menu-arrow"></span
                     ></a>
                     <ul>
                       <li><a href="hostel-list.html">Hostel List</a></li>
                       <li><a href="hostel-rooms.html">Hostel Rooms</a></li>
-                      <li>
-                        <a href="hostel-room-type.html" class="active"
-                          >Room Type</a
-                        >
-                      </li>
+                      <li><a href="hostel-room-type.html">Room Type</a></li>
                     </ul>
                   </li>
                   <li class="submenu">
@@ -1505,31 +1508,68 @@
                 </ul>
               </li> -->
               <!-- <li>
-							<h6 class="submenu-hdr"><span>Help</span></h6>
-							<ul>
-								<li><a href="https://preschool.dreamstechnologies.com/documentation/index.html"><i class="ti ti-file-text"></i><span>Documentation</span></a></li>
-								<li><a href="https://preschool.dreamstechnologies.com/documentation/changelog.html"><i class="ti ti-exchange"></i><span>Changelog</span><span class="badge badge-primary badge-xs text-white fs-10 ms-auto">v1.8.3</span></a></li>
-								<li class="submenu">
-									<a href="javascript:void(0);"><i class="ti ti-menu-2"></i><span>Multi
-											Level</span><span class="menu-arrow"></span></a>
-									<ul>
-										<li><a href="javascript:void(0);">Multilevel 1</a></li>
-										<li class="submenu submenu-two"><a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
-											<ul>
-												<li><a href="javascript:void(0);">Multilevel 2.1</a></li>
-												<li class="submenu submenu-two submenu-three"><a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
-													<ul>
-														<li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
-														<li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="javascript:void(0);">Multilevel 3</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li> -->
+                <h6 class="submenu-hdr"><span>Help</span></h6>
+                <ul>
+                  <li>
+                    <a
+                      href="https://preschool.dreamstechnologies.com/documentation/index.html"
+                      ><i class="ti ti-file-text"></i
+                      ><span>Documentation</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://preschool.dreamstechnologies.com/documentation/changelog.html"
+                      ><i class="ti ti-exchange"></i><span>Changelog</span
+                      ><span
+                        class="badge badge-primary badge-xs text-white fs-10 ms-auto"
+                        >v1.8.3</span
+                      ></a
+                    >
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);"
+                      ><i class="ti ti-menu-2"></i><span>Multi Level</span
+                      ><span class="menu-arrow"></span
+                    ></a>
+                    <ul>
+                      <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                      <li class="submenu submenu-two">
+                        <a href="javascript:void(0);"
+                          >Multilevel 2<span
+                            class="menu-arrow inside-submenu"
+                          ></span
+                        ></a>
+                        <ul>
+                          <li>
+                            <a href="javascript:void(0);">Multilevel 2.1</a>
+                          </li>
+                          <li class="submenu submenu-two submenu-three">
+                            <a href="javascript:void(0);"
+                              >Multilevel 2.2<span
+                                class="menu-arrow inside-submenu inside-submenu-two"
+                              ></span
+                            ></a>
+                            <ul>
+                              <li>
+                                <a href="javascript:void(0);"
+                                  >Multilevel 2.2.1</a
+                                >
+                              </li>
+                              <li>
+                                <a href="javascript:void(0);"
+                                  >Multilevel 2.2.2</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -1538,891 +1578,786 @@
 
       <!-- Page Wrapper -->
       <div class="page-wrapper">
-        <div class="content">
+        <div class="content content-two">
           <!-- Page Header -->
           <div
             class="d-md-flex d-block align-items-center justify-content-between mb-3"
           >
             <div class="my-auto mb-2">
-              <h3 class="page-title mb-1">Room Type</h3>
+              <h3 class="mb-1">Add Teacher</h3>
               <nav>
                 <ol class="breadcrumb mb-0">
                   <li class="breadcrumb-item">
                     <a href="index.html">Dashboard</a>
                   </li>
                   <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">Management </a>
+                    <a href="teachers.html">Teachers</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Room Type
+                    Add Teacher
                   </li>
                 </ol>
               </nav>
             </div>
-            <div
-              class="d-flex my-xl-auto right-content align-items-center flex-wrap"
-            >
-              <div class="pe-1 mb-2">
-                <a
-                  href="#"
-                  class="btn btn-outline-light bg-white btn-icon me-1"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  aria-label="Refresh"
-                  data-bs-original-title="Refresh"
-                >
-                  <i class="ti ti-refresh"></i>
-                </a>
-              </div>
-              <div class="pe-1 mb-2">
-                <button
-                  type="button"
-                  class="btn btn-outline-light bg-white btn-icon me-1"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  aria-label="Print"
-                  data-bs-original-title="Print"
-                >
-                  <i class="ti ti-printer"></i>
-                </button>
-              </div>
-              <div class="dropdown me-2 mb-2">
-                <a
-                  href="javascript:void(0);"
-                  class="dropdown-toggle btn btn-light fw-medium d-inline-flex align-items-center"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="ti ti-file-export me-2"></i>Export
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end p-3">
-                  <li>
-                    <a
-                      href="javascript:void(0);"
-                      class="dropdown-item rounded-1"
-                      ><i class="ti ti-file-type-pdf me-1"></i>Export as PDF</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0);"
-                      class="dropdown-item rounded-1"
-                      ><i class="ti ti-file-type-xls me-1"></i>Export as Excel
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="mb-2">
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex align-items-center"
-                  data-bs-toggle="modal"
-                  data-bs-target="#add_hostel_room_type"
-                  ><i class="ti ti-square-rounded-plus me-2"></i>Add Room
-                  Type</a
-                >
-              </div>
-            </div>
           </div>
           <!-- /Page Header -->
 
-          <!-- Students List -->
-          <div class="card">
-            <div
-              class="card-header d-flex align-items-center justify-content-between flex-wrap pb-0"
-            >
-              <h4 class="mb-3">Room Type</h4>
-              <div class="d-flex align-items-center flex-wrap">
-                <div class="input-icon-start mb-3 me-2 position-relative">
-                  <span class="icon-addon">
-                    <i class="ti ti-calendar"></i>
-                  </span>
-                  <input
-                    type="text"
-                    class="form-control date-range bookingrange"
-                    placeholder="Select"
-                    value="Academic Year : 2024 / 2025"
-                  />
-                </div>
-                <div class="dropdown mb-3 me-2">
-                  <a
-                    href="javascript:void(0);"
-                    class="btn btn-outline-light bg-white dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    ><i class="ti ti-filter me-2"></i>Filter</a
-                  >
-                  <div class="dropdown-menu drop-width">
-                    <form action="hostel-room-type.html">
-                      <div class="d-flex align-items-center border-bottom p-3">
-                        <h4>Filter</h4>
-                      </div>
-                      <div class="p-3 border-bottom">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="mb-0">
-                              <label class="form-label">Type</label>
-                              <select class="select">
-                                <option>Select</option>
-                                <option>One Bed</option>
-                                <option>One Bed AC</option>
-                                <option>Two Bed</option>
-                                <option>Two Bed AC</option>
-                              </select>
+          <div class="row">
+            <div class="col-md-12">
+              <form action="teachers.html">
+                <!-- Personal Information -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-info-square-rounded fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Personal Information</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div
+                          class="d-flex align-items-center flex-wrap row-gap-3 mb-3"
+                        >
+                          <div
+                            class="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames"
+                          >
+                            <i class="ti ti-photo-plus fs-16"></i>
+                          </div>
+                          <div class="profile-upload">
+                            <div
+                              class="profile-uploader d-flex align-items-center"
+                            >
+                              <div class="drag-upload-btn mb-3">
+                                Upload
+                                <input
+                                  type="file"
+                                  class="form-control image-sign"
+                                  multiple=""
+                                />
+                              </div>
+                              <a
+                                href="javascript:void(0);"
+                                class="btn btn-primary mb-3"
+                                >Remove</a
+                              >
                             </div>
+                            <p class="fs-12">
+                              Upload image size 4MB, Format JPG, PNG, SVG
+                            </p>
                           </div>
                         </div>
                       </div>
-                      <div
-                        class="p-3 d-flex align-items-center justify-content-end"
-                      >
-                        <a href="#" class="btn btn-light me-3">Reset</a>
-                        <button type="submit" class="btn btn-primary">
-                          Apply
-                        </button>
+                    </div>
+                    <div class="row row-cols-xxl-5 row-cols-md-6">
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Teacher ID</label>
+                          <input type="text" class="form-control" />
+                        </div>
                       </div>
-                    </form>
-                  </div>
-                </div>
-
-                <div class="dropdown mb-3">
-                  <a
-                    href="javascript:void(0);"
-                    class="btn btn-outline-light bg-white dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    ><i class="ti ti-sort-ascending-2 me-2"></i>Sort by A-Z
-                  </a>
-                  <ul class="dropdown-menu p-3">
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1 active"
-                      >
-                        Ascending
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Descending
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Recently Viewed
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Recently Added
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-0 py-3">
-              <!-- Student List -->
-              <div class="custom-datatable-filter table-responsive">
-                <table class="table datatable">
-                  <thead class="thead-light">
-                    <tr>
-                      <th class="no-sort">
-                        <div class="form-check form-check-md">
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">First Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Last Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Class</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>III A</option>
+                            <option>II (A)</option>
+                            <option>VI (A)</option>
+                            <option>VIII</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Subject</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Physics</option>
+                            <option>Computer</option>
+                            <option>English</option>
+                            <option>Spanish</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Gender</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >Primary Contact Number</label
+                          >
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Email Address</label>
+                          <input type="email" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Blood Group</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>O +ve</option>
+                            <option>B +ve</option>
+                            <option>B -ve</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Date of Joining</label>
+                          <div class="input-icon position-relative">
+                            <span class="input-icon-addon">
+                              <i class="ti ti-calendar"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control datetimepicker"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Father’s Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Mother’s Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Date of Birth</label>
+                          <div class="input-icon position-relative">
+                            <span class="input-icon-addon">
+                              <i class="ti ti-calendar"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control datetimepicker"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Marital Status</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Language Known</label>
                           <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="select-all"
+                            class="input-tags form-control"
+                            type="text"
+                            data-role="tagsinput"
+                            name="Label"
+                            value="English, Spanish"
                           />
                         </div>
-                      </th>
-                      <th>ID</th>
-                      <th>Room Type</th>
-                      <th>Description</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Qualification</label>
+                          <input type="text" class="form-control" />
                         </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846235</a></td>
-                      <td>One Bed</td>
-                      <td>
-                        Enjoy serene solitude in our one-bed room, your tranquil
-                        retreat for focused studying
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Work Experience</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >Previous School if Any</label
+                          >
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >Previous School Address</label
+                          >
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >Previous School Phone No</label
+                          >
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Address</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Permanent Address</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >PAN Number / ID Number</label
+                          >
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Status</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xxl-12 col-xl-12">
+                        <div class="mb-3">
+                          <label class="form-label">Notes</label>
+                          <textarea
+                            class="form-control"
+                            placeholder="Other Information"
+                            rows="4"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Personal Information -->
+
+                <!-- Payroll -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-user-shield fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Payroll</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">EPF No</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Basic Salary</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Contract Type</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Permanent</option>
+                            <option>Temporary</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Work Shift</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Work Location</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Date of Leaving</label>
+                          <div class="input-icon position-relative">
+                            <span class="input-icon-addon">
+                              <i class="ti ti-calendar"></i>
+                            </span>
+                            <input
+                              type="text"
+                              class="form-control datetimepicker"
+                            />
                           </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Payroll -->
+
+                <!-- Leaves -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-users fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Leaves</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Medical Leaves</label>
+                          <input type="text" class="form-control" />
                         </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846234</a></td>
-                      <td>One Bed AC</td>
-                      <td>
-                        Stay cool and focused in our one-bed AC room, your
-                        serene study haven
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
+                      </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Casual Leaves</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Maternity Leaves</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Sick Leaves</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Leaves -->
+
+                <!-- Bank Details -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-map fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Bank Account Detail</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Account Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Account Number</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Bank Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">IFSC Code</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Branch Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Bank Details -->
+
+                <!-- Transport Information -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-bus-stop fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Transport Information</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Route</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Newyork</option>
+                            <option>Denver</option>
+                            <option>Chicago</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Vehicle Number</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>AM 54548</option>
+                            <option>AM 64528</option>
+                            <option>AM 123548</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Pickup Point</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Cincinatti</option>
+                            <option>Illinois</option>
+                            <option>Morgan</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Transport Information -->
+
+                <!-- Hostel Information -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-building-fortress fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Hostel Information</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Hostel</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>Phoenix Residence</option>
+                            <option>Tranquil Haven</option>
+                            <option>Radiant Towers</option>
+                            <option>Nova Nest</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Room No</label>
+                          <select class="select">
+                            <option>Select</option>
+                            <option>20</option>
+                            <option>22</option>
+                            <option>24</option>
+                            <option>26</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Hostel Information -->
+
+                <!-- Social Media Links -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-building fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Social Media Links</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row rows-cols-xxl-5">
+                      <div class="col-xxl col-xl-3 col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Facebook</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Instagram</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Linked In</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Youtube</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xxl col-xl-3 col-lg-4 col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Twitter URL</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Social Media Links -->
+
+                <!-- Documents -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-file fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Documents</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <div class="mb-3">
+                            <label class="form-label">Upload Resume</label>
+                            <p>Upload image size of 4MB, Accepted Format PDF</p>
+                          </div>
+                          <div class="d-flex align-items-center flex-wrap">
+                            <div
+                              class="btn btn-primary drag-upload-btn mb-2 me-2"
                             >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
+                              <i class="ti ti-file-upload me-1"></i>Change
+                              <input
+                                type="file"
+                                class="form-control image_sign"
+                                multiple=""
+                              />
+                            </div>
+                            <p class="mb-2">Resume.pdf</p>
                           </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846233</a></td>
-                      <td>Two Bed</td>
-                      <td>
-                        Study together in comfort and camaraderie in our two-bed
-                        room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <div class="mb-3">
+                            <label class="form-label"
+                              >Upload Joining Letter</label
                             >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
+                            <p>Upload image size of 4MB, Accepted Format PDF</p>
+                          </div>
+                          <div class="d-flex align-items-center flex-wrap">
+                            <div
+                              class="btn btn-primary drag-upload-btn mb-2 me-2"
+                            >
+                              <i class="ti ti-file-upload me-1"></i>Upload
+                              Document
+                              <input
+                                type="file"
+                                class="form-control image_sign"
+                                multiple=""
+                              />
+                            </div>
+                            <p class="mb-2">Resume.pdf</p>
                           </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Documents -->
+
+                <!-- Password -->
+                <div class="card">
+                  <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                      >
+                        <i class="ti ti-file fs-16"></i>
+                      </span>
+                      <h4 class="text-dark">Password</h4>
+                    </div>
+                  </div>
+                  <div class="card-body pb-1">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">New Password</label>
+                          <input type="password" class="form-control" />
                         </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846232</a></td>
-                      <td>Two Bed AC</td>
-                      <td>
-                        Stay cool and study together in comfort in our two-bed
-                        AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" />
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846231</a></td>
-                      <td>Three Bed</td>
-                      <td>
-                        Study comfortably in our spacious three-bed room, share
-                        learning and camaraderie
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846230</a></td>
-                      <td>Three Bed AC</td>
-                      <td>
-                        Experience collaborative studying in comfort with our
-                        three-bed AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846229</a></td>
-                      <td>Four Bed</td>
-                      <td>
-                        Engage in group study sessions and foster camaraderie in
-                        our spacious four-bed room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846228</a></td>
-                      <td>Four Bed AC</td>
-                      <td>
-                        Experience collaborative study sessions in comfort with
-                        our spacious four-bed AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846227</a></td>
-                      <td>Five Bed</td>
-                      <td>
-                        Foster teamwork and academic synergy, ideal for group
-                        study sessions
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846226</a></td>
-                      <td>Five Bed AC</td>
-                      <td>
-                        Optimal comfort meets collaborative studying, perfect
-                        for academic synergy among residents.
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /Student List -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Password -->
+
+                <div class="text-end">
+                  <button type="button" class="btn btn-light me-3">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Add Teacher
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-          <!-- /Students List -->
         </div>
       </div>
       <!-- /Page Wrapper -->
-
-      <!-- Add Room Type-->
-      <div class="modal fade" id="add_hostel_room_type">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add Room Type</h4>
-              <button
-                type="button"
-                class="btn-close custom-btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="ti ti-x"></i>
-              </button>
-            </div>
-            <form action="hostel-room-type.html">
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label">Room Type</label>
-                      <input type="text" class="form-control" />
-                    </div>
-                    <div class="mb-0">
-                      <label class="form-label">Cost per Bed</label>
-                      <textarea class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn btn-light me-2" data-bs-dismiss="modal"
-                  >Cancel</a
-                >
-                <button type="submit" class="btn btn-primary">
-                  Add Room Type
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Add Room Type -->
-
-      <!-- Edit Room Type -->
-      <div class="modal fade" id="edit_hostel_room_type">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Room Type</h4>
-              <button
-                type="button"
-                class="btn-close custom-btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="ti ti-x"></i>
-              </button>
-            </div>
-            <form action="hostel-room-type.html">
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label">Room Type</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter Room Type"
-                        value="Two Bed"
-                      />
-                    </div>
-                    <div class="mb-0">
-                      <label class="form-label">Cost per Bed</label>
-                      <textarea
-                        class="form-control"
-                        placeholder="text"
-                        rows="4"
-                      >
-Enjoy serene solitude in our one-bed room, your tranquil retreat for focused studying</textarea
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn btn-light me-2" data-bs-dismiss="modal"
-                  >Cancel</a
-                >
-                <button type="submit" class="btn btn-primary">
-                  Save Changes
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Edit Room Type -->
-
-      <!-- Delete Modal -->
-      <div class="modal fade" id="delete-modal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <form action="hostel-room-type.html">
-              <div class="modal-body text-center">
-                <span class="delete-icon">
-                  <i class="ti ti-trash-x"></i>
-                </span>
-                <h4>Confirm Deletion</h4>
-                <p>
-                  You want to delete all the marked items, this cant be undone
-                  once you delete.
-                </p>
-                <div class="d-flex justify-content-center">
-                  <a
-                    href="javascript:void(0);"
-                    class="btn btn-light me-3"
-                    data-bs-dismiss="modal"
-                    >Cancel</a
-                  >
-                  <button type="submit" class="btn btn-danger">
-                    Yes, Delete
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- /Delete Modal -->
     </div>
     <!-- /Main Wrapper -->
 
     <!-- jQuery -->
     <script
       src="js/jquery-3.7.1.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Bootstrap Core JS -->
     <script
       src="js/bootstrap.bundle.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Daterangepikcer JS -->
     <script
       src="js/moment.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
     <script
       src="js/daterangepicker.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Feather Icon JS -->
     <script
       src="js/feather.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Slimscroll JS -->
     <script
       src="js/jquery.slimscroll.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
-    ></script>
-
-    <!-- Datatable JS -->
-    <script
-      src="js/jquery.dataTables.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
-    ></script>
-    <script
-      src="js/dataTables.bootstrap5.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Select2 JS -->
     <script
       src="js/select2.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
+    ></script>
+
+    <!-- Datetimepicker JS -->
+    <script
+      src="js/moment.js"
+      type="07be7720340282688975b811-text/javascript"
+    ></script>
+    <script
+      src="js/bootstrap-datetimepicker.min.js"
+      type="07be7720340282688975b811-text/javascript"
+    ></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script
+      src="js/bootstrap-tagsinput.js"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <!-- Custom JS -->
     <script
       src="js/script.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="07be7720340282688975b811-text/javascript"
     ></script>
 
     <script
       src="js/rocket-loader.min.js"
-      data-cf-settings="e8479a4e05f3cfa769588570-|49"
+      data-cf-settings="07be7720340282688975b811-|49"
       defer=""
     ></script>
   </body>

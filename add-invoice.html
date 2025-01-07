@@ -24,7 +24,7 @@
     <!-- Theme Script -->
     <script
       src="js/theme-script.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Bootstrap CSS -->
@@ -39,20 +39,25 @@
     <!-- Daterangepikcer CSS -->
     <link rel="stylesheet" href="css/daterangepicker.css" />
 
+    <!-- Summernote CSS -->
+    <link rel="stylesheet" href="css/summernote-lite.min.css" />
+
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
 
-    <!-- Datatable CSS -->
-    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="css/select2.min.css" />
+
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+
+    <!-- Bootstrap Tagsinput CSS -->
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css" />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <!-- Main Wrapper -->
     <div class="main-wrapper">
@@ -812,18 +817,14 @@
                     >
                   </li>
                   <li class="submenu">
-                    <a href="javascript:void(0);" class="subdrop active"
+                    <a href="javascript:void(0);"
                       ><i class="ti ti-building-fortress"></i><span>Hostel</span
                       ><span class="menu-arrow"></span
                     ></a>
                     <ul>
                       <li><a href="hostel-list.html">Hostel List</a></li>
                       <li><a href="hostel-rooms.html">Hostel Rooms</a></li>
-                      <li>
-                        <a href="hostel-room-type.html" class="active"
-                          >Room Type</a
-                        >
-                      </li>
+                      <li><a href="hostel-room-type.html">Room Type</a></li>
                     </ul>
                   </li>
                   <li class="submenu">
@@ -916,7 +917,7 @@
                 <h6 class="submenu-hdr"><span>Finance & Accounts</span></h6>
                 <ul>
                   <li class="submenu">
-                    <a href="javascript:void(0);">
+                    <a href="javascript:void(0);" class="active subdrop">
                       <i class="ti ti-swipe"></i><span>Accounts</span
                       ><span class="menu-arrow"></span>
                     </a>
@@ -926,8 +927,11 @@
                         <a href="expenses-category.html">Expense Category</a>
                       </li>
                       <li><a href="accounts-income.html">Income</a></li>
-                      <li><a href="accounts-invoices.html">Invoices</a></li>
-                      <li><a href="invoice.html">Invoice View</a></li>
+                      <li>
+                        <a href="accounts-invoices.html" class="active"
+                          >Invoices</a
+                        >
+                      </li>
                       <li>
                         <a href="accounts-transactions.html">Transactions</a>
                       </li>
@@ -1505,31 +1509,68 @@
                 </ul>
               </li> -->
               <!-- <li>
-							<h6 class="submenu-hdr"><span>Help</span></h6>
-							<ul>
-								<li><a href="https://preschool.dreamstechnologies.com/documentation/index.html"><i class="ti ti-file-text"></i><span>Documentation</span></a></li>
-								<li><a href="https://preschool.dreamstechnologies.com/documentation/changelog.html"><i class="ti ti-exchange"></i><span>Changelog</span><span class="badge badge-primary badge-xs text-white fs-10 ms-auto">v1.8.3</span></a></li>
-								<li class="submenu">
-									<a href="javascript:void(0);"><i class="ti ti-menu-2"></i><span>Multi
-											Level</span><span class="menu-arrow"></span></a>
-									<ul>
-										<li><a href="javascript:void(0);">Multilevel 1</a></li>
-										<li class="submenu submenu-two"><a href="javascript:void(0);">Multilevel 2<span class="menu-arrow inside-submenu"></span></a>
-											<ul>
-												<li><a href="javascript:void(0);">Multilevel 2.1</a></li>
-												<li class="submenu submenu-two submenu-three"><a href="javascript:void(0);">Multilevel 2.2<span class="menu-arrow inside-submenu inside-submenu-two"></span></a>
-													<ul>
-														<li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
-														<li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="javascript:void(0);">Multilevel 3</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li> -->
+                <h6 class="submenu-hdr"><span>Help</span></h6>
+                <ul>
+                  <li>
+                    <a
+                      href="https://preschool.dreamstechnologies.com/documentation/index.html"
+                      ><i class="ti ti-file-text"></i
+                      ><span>Documentation</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://preschool.dreamstechnologies.com/documentation/changelog.html"
+                      ><i class="ti ti-exchange"></i><span>Changelog</span
+                      ><span
+                        class="badge badge-primary badge-xs text-white fs-10 ms-auto"
+                        >v1.8.3</span
+                      ></a
+                    >
+                  </li>
+                  <li class="submenu">
+                    <a href="javascript:void(0);"
+                      ><i class="ti ti-menu-2"></i><span>Multi Level</span
+                      ><span class="menu-arrow"></span
+                    ></a>
+                    <ul>
+                      <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                      <li class="submenu submenu-two">
+                        <a href="javascript:void(0);"
+                          >Multilevel 2<span
+                            class="menu-arrow inside-submenu"
+                          ></span
+                        ></a>
+                        <ul>
+                          <li>
+                            <a href="javascript:void(0);">Multilevel 2.1</a>
+                          </li>
+                          <li class="submenu submenu-two submenu-three">
+                            <a href="javascript:void(0);"
+                              >Multilevel 2.2<span
+                                class="menu-arrow inside-submenu inside-submenu-two"
+                              ></span
+                            ></a>
+                            <ul>
+                              <li>
+                                <a href="javascript:void(0);"
+                                  >Multilevel 2.2.1</a
+                                >
+                              </li>
+                              <li>
+                                <a href="javascript:void(0);"
+                                  >Multilevel 2.2.2</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -1538,803 +1579,366 @@
 
       <!-- Page Wrapper -->
       <div class="page-wrapper">
-        <div class="content">
+        <div class="content content-two">
           <!-- Page Header -->
           <div
             class="d-md-flex d-block align-items-center justify-content-between mb-3"
           >
             <div class="my-auto mb-2">
-              <h3 class="page-title mb-1">Room Type</h3>
+              <h3 class="page-title mb-1">Add Invoice</h3>
               <nav>
                 <ol class="breadcrumb mb-0">
                   <li class="breadcrumb-item">
                     <a href="index.html">Dashboard</a>
                   </li>
                   <li class="breadcrumb-item">
-                    <a href="javascript:void(0);">Management </a>
+                    <a href="teachers.html">Finance & Accounts</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Room Type
+                    Add Invoice
                   </li>
                 </ol>
               </nav>
             </div>
-            <div
-              class="d-flex my-xl-auto right-content align-items-center flex-wrap"
-            >
-              <div class="pe-1 mb-2">
-                <a
-                  href="#"
-                  class="btn btn-outline-light bg-white btn-icon me-1"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  aria-label="Refresh"
-                  data-bs-original-title="Refresh"
-                >
-                  <i class="ti ti-refresh"></i>
-                </a>
-              </div>
-              <div class="pe-1 mb-2">
-                <button
-                  type="button"
-                  class="btn btn-outline-light bg-white btn-icon me-1"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  aria-label="Print"
-                  data-bs-original-title="Print"
-                >
-                  <i class="ti ti-printer"></i>
-                </button>
-              </div>
-              <div class="dropdown me-2 mb-2">
-                <a
-                  href="javascript:void(0);"
-                  class="dropdown-toggle btn btn-light fw-medium d-inline-flex align-items-center"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="ti ti-file-export me-2"></i>Export
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end p-3">
-                  <li>
-                    <a
-                      href="javascript:void(0);"
-                      class="dropdown-item rounded-1"
-                      ><i class="ti ti-file-type-pdf me-1"></i>Export as PDF</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:void(0);"
-                      class="dropdown-item rounded-1"
-                      ><i class="ti ti-file-type-xls me-1"></i>Export as Excel
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="mb-2">
-                <a
-                  href="#"
-                  class="btn btn-primary d-flex align-items-center"
-                  data-bs-toggle="modal"
-                  data-bs-target="#add_hostel_room_type"
-                  ><i class="ti ti-square-rounded-plus me-2"></i>Add Room
-                  Type</a
-                >
-              </div>
-            </div>
           </div>
           <!-- /Page Header -->
 
-          <!-- Students List -->
-          <div class="card">
-            <div
-              class="card-header d-flex align-items-center justify-content-between flex-wrap pb-0"
-            >
-              <h4 class="mb-3">Room Type</h4>
-              <div class="d-flex align-items-center flex-wrap">
-                <div class="input-icon-start mb-3 me-2 position-relative">
-                  <span class="icon-addon">
-                    <i class="ti ti-calendar"></i>
-                  </span>
-                  <input
-                    type="text"
-                    class="form-control date-range bookingrange"
-                    placeholder="Select"
-                    value="Academic Year : 2024 / 2025"
-                  />
-                </div>
-                <div class="dropdown mb-3 me-2">
-                  <a
-                    href="javascript:void(0);"
-                    class="btn btn-outline-light bg-white dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    ><i class="ti ti-filter me-2"></i>Filter</a
-                  >
-                  <div class="dropdown-menu drop-width">
-                    <form action="hostel-room-type.html">
-                      <div class="d-flex align-items-center border-bottom p-3">
-                        <h4>Filter</h4>
+          <div class="row">
+            <div class="col-md-12">
+              <form action="accounts-invoices.html">
+                <div class="card">
+                  <div class="card-body pb-0">
+                    <!-- Customer Logo -->
+                    <div class="card">
+                      <div class="card-header bg-light">
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                          >
+                            <i class="ti ti-user-check fs-16"></i>
+                          </span>
+                          <h4 class="text-dark">Company Logo</h4>
+                        </div>
                       </div>
-                      <div class="p-3 border-bottom">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="mb-0">
-                              <label class="form-label">Type</label>
-                              <select class="select">
-                                <option>Select</option>
-                                <option>One Bed</option>
-                                <option>One Bed AC</option>
-                                <option>Two Bed</option>
-                                <option>Two Bed AC</option>
-                              </select>
+                      <div class="card-body pb-1">
+                        <div class="profile-wrap mb-3">
+                          <div class="frames bg-white">
+                            <i class="ti ti-photo-plus"></i>
+                          </div>
+                          <div class="profile-upload">
+                            <div
+                              class="profile-uploader d-flex align-items-center"
+                            >
+                              <div class="drag-upload-btn mb-3">
+                                Upload
+                                <input
+                                  type="file"
+                                  class="form-control image-sign"
+                                  multiple=""
+                                />
+                              </div>
+                              <a
+                                href="javascript:void(0);"
+                                class="btn btn-primary mb-3"
+                                >Remove</a
+                              >
+                            </div>
+                            <p class="fs-12">
+                              Upload image size 4MB, Format JPG, PNG, SVG
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Customer Logo -->
+
+                    <!-- Customer Information -->
+                    <div class="card">
+                      <div class="card-header bg-light">
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                          >
+                            <i class="ti ti-user-check fs-16"></i>
+                          </span>
+                          <h4 class="text-dark">Customer Information</h4>
+                        </div>
+                      </div>
+                      <div class="card-body pb-0">
+                        <div class="info-section">
+                          <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Customer Name</label>
+                                <select class="select">
+                                  <option>Select</option>
+                                  <option>Ralph Claudia</option>
+                                  <option>Julie Scott</option>
+                                  <option>Maria</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Invoice Number</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Invoice Date</label>
+                                <div class="input-icon position-relative">
+                                  <span class="input-icon-addon">
+                                    <i class="ti ti-calendar"></i>
+                                  </span>
+                                  <input
+                                    type="text"
+                                    class="form-control datetimepicker"
+                                    placeholder="dd-mm-yyyy"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Due Date</label>
+                                <div class="input-icon position-relative">
+                                  <span class="input-icon-addon">
+                                    <i class="ti ti-calendar"></i>
+                                  </span>
+                                  <input
+                                    type="text"
+                                    class="form-control datetimepicker"
+                                    placeholder="dd-mm-yyyy"
+                                  />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div
-                        class="p-3 d-flex align-items-center justify-content-end"
-                      >
-                        <a href="#" class="btn btn-light me-3">Reset</a>
-                        <button type="submit" class="btn btn-primary">
-                          Apply
-                        </button>
+                    </div>
+                    <!-- /Customer Information -->
+
+                    <!-- Product Information -->
+                    <div class="card">
+                      <div class="card-header bg-light">
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0"
+                          >
+                            <i class="ti ti-shopping-cart-copy fs-16"></i>
+                          </span>
+                          <h4 class="text-dark">Product Information</h4>
+                        </div>
                       </div>
-                    </form>
+                      <div class="card-body pb-0">
+                        <div class="info-section">
+                          <div class="row align-items-end">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Product Name</label>
+                                <select class="select">
+                                  <option>Select</option>
+                                  <option>STEM Program Grant</option>
+                                  <option>Uniform</option>
+                                  <option>Library Donation</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Quantity</label>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  placeholder="Enter Quantity"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="mb-3">
+                                <a href="#" class="btn btn-primary"
+                                  ><i class="ti ti-plus me-2"></i>Add to Bill</a
+                                >
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="invoice-product-table">
+                                <div class="table-responsive invoice-table">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Product Name</th>
+                                        <th>Quantity</th>
+                                        <th>Unit Price</th>
+                                        <th>Discount</th>
+                                        <th>Net Amount</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Uniform</td>
+                                        <td>
+                                          <input
+                                            type="number"
+                                            class="form-control"
+                                            placeholder="0"
+                                            value=""
+                                          />
+                                        </td>
+                                        <td>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="0"
+                                            value=""
+                                          />
+                                        </td>
+                                        <td>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="%"
+                                            value=""
+                                          />
+                                        </td>
+                                        <td>$0</td>
+                                        <td>
+                                          <a
+                                            href="#"
+                                            class="delete-invoive-list"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#delete-modal"
+                                            ><i class="ti ti-trash"></i
+                                          ></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Description</td>
+                                        <td>
+                                          <input
+                                            type="number"
+                                            class="form-control"
+                                            placeholder="0"
+                                          />
+                                        </td>
+                                        <td>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="0"
+                                          />
+                                        </td>
+                                        <td>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="%"
+                                          />
+                                        </td>
+                                        <td>$0</td>
+                                        <td>
+                                          <a
+                                            href="#"
+                                            class="delete-invoive-list"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#delete-modal"
+                                            ><i class="ti ti-trash"></i
+                                          ></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Product Information -->
+
+                    <div class="invoice-info">
+                      <div class="row">
+                        <div class="col-xxl-9 col-lg-8">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="mb-3">
+                                <label class="form-label">Notes</label>
+                                <div class="summernote"></div>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label"
+                                  >Terms & Conditions</label
+                                >
+                                <div class="summernote"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4">
+                          <div class="card invoice-amount-details">
+                            <ul>
+                              <li>
+                                <span>Subtotal</span>
+                                <h6>$00.00</h6>
+                              </li>
+                              <li>
+                                <span>Discount</span>
+                                <h6>$00.00</h6>
+                              </li>
+                              <li>
+                                <span>Tax</span>
+                                <h6>$00.00</h6>
+                              </li>
+                              <li>
+                                <h5>Total</h5>
+                                <h5>$00.00</h5>
+                              </li>
+                            </ul>
+                            <div class="mb-3">
+                              <label class="form-label">Signature Name</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <div
+                              class="input-block service-upload service-upload-info mb-0"
+                            >
+                              <span
+                                ><i class="ti ti-upload me-2"></i>Upload
+                                Signature</span
+                              >
+                              <input type="file" multiple="" id="image_sign" />
+                              <div id="frames"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div class="dropdown mb-3">
-                  <a
-                    href="javascript:void(0);"
-                    class="btn btn-outline-light bg-white dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    ><i class="ti ti-sort-ascending-2 me-2"></i>Sort by A-Z
-                  </a>
-                  <ul class="dropdown-menu p-3">
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1 active"
-                      >
-                        Ascending
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Descending
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Recently Viewed
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item rounded-1"
-                      >
-                        Recently Added
-                      </a>
-                    </li>
-                  </ul>
+                <div class="text-end">
+                  <button type="button" class="btn btn-light me-3">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Add Invoice
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="card-body p-0 py-3">
-              <!-- Student List -->
-              <div class="custom-datatable-filter table-responsive">
-                <table class="table datatable">
-                  <thead class="thead-light">
-                    <tr>
-                      <th class="no-sort">
-                        <div class="form-check form-check-md">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="select-all"
-                          />
-                        </div>
-                      </th>
-                      <th>ID</th>
-                      <th>Room Type</th>
-                      <th>Description</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846235</a></td>
-                      <td>One Bed</td>
-                      <td>
-                        Enjoy serene solitude in our one-bed room, your tranquil
-                        retreat for focused studying
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846234</a></td>
-                      <td>One Bed AC</td>
-                      <td>
-                        Stay cool and focused in our one-bed AC room, your
-                        serene study haven
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846233</a></td>
-                      <td>Two Bed</td>
-                      <td>
-                        Study together in comfort and camaraderie in our two-bed
-                        room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846232</a></td>
-                      <td>Two Bed AC</td>
-                      <td>
-                        Stay cool and study together in comfort in our two-bed
-                        AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846231</a></td>
-                      <td>Three Bed</td>
-                      <td>
-                        Study comfortably in our spacious three-bed room, share
-                        learning and camaraderie
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846230</a></td>
-                      <td>Three Bed AC</td>
-                      <td>
-                        Experience collaborative studying in comfort with our
-                        three-bed AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846229</a></td>
-                      <td>Four Bed</td>
-                      <td>
-                        Engage in group study sessions and foster camaraderie in
-                        our spacious four-bed room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846228</a></td>
-                      <td>Four Bed AC</td>
-                      <td>
-                        Experience collaborative study sessions in comfort with
-                        our spacious four-bed AC room
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846227</a></td>
-                      <td>Five Bed</td>
-                      <td>
-                        Foster teamwork and academic synergy, ideal for group
-                        study sessions
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check form-check-md">
-                          <input class="form-check-input" type="checkbox" />
-                        </div>
-                      </td>
-                      <td><a href="#" class="link-primary">RT846226</a></td>
-                      <td>Five Bed AC</td>
-                      <td>
-                        Optimal comfort meets collaborative studying, perfect
-                        for academic synergy among residents.
-                      </td>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-white btn-icon btn-sm d-flex align-items-center justify-content-center rounded-circle p-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="ti ti-dots-vertical fs-14"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right p-3">
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#edit_hostel_room_type"
-                                  ><i class="ti ti-edit-circle me-2"></i>Edit</a
-                                >
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item rounded-1"
-                                  href="#"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#delete-modal"
-                                  ><i class="ti ti-trash-x me-2"></i>Delete</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /Student List -->
+              </form>
             </div>
           </div>
-          <!-- /Students List -->
         </div>
       </div>
       <!-- /Page Wrapper -->
-
-      <!-- Add Room Type-->
-      <div class="modal fade" id="add_hostel_room_type">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add Room Type</h4>
-              <button
-                type="button"
-                class="btn-close custom-btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="ti ti-x"></i>
-              </button>
-            </div>
-            <form action="hostel-room-type.html">
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label">Room Type</label>
-                      <input type="text" class="form-control" />
-                    </div>
-                    <div class="mb-0">
-                      <label class="form-label">Cost per Bed</label>
-                      <textarea class="form-control" rows="4"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn btn-light me-2" data-bs-dismiss="modal"
-                  >Cancel</a
-                >
-                <button type="submit" class="btn btn-primary">
-                  Add Room Type
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Add Room Type -->
-
-      <!-- Edit Room Type -->
-      <div class="modal fade" id="edit_hostel_room_type">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Room Type</h4>
-              <button
-                type="button"
-                class="btn-close custom-btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="ti ti-x"></i>
-              </button>
-            </div>
-            <form action="hostel-room-type.html">
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label">Room Type</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter Room Type"
-                        value="Two Bed"
-                      />
-                    </div>
-                    <div class="mb-0">
-                      <label class="form-label">Cost per Bed</label>
-                      <textarea
-                        class="form-control"
-                        placeholder="text"
-                        rows="4"
-                      >
-Enjoy serene solitude in our one-bed room, your tranquil retreat for focused studying</textarea
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn btn-light me-2" data-bs-dismiss="modal"
-                  >Cancel</a
-                >
-                <button type="submit" class="btn btn-primary">
-                  Save Changes
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Edit Room Type -->
 
       <!-- Delete Modal -->
       <div class="modal fade" id="delete-modal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <form action="hostel-room-type.html">
+            <form action="add-invoice.html">
               <div class="modal-body text-center">
                 <span class="delete-icon">
                   <i class="ti ti-trash-x"></i>
@@ -2367,62 +1971,74 @@ Enjoy serene solitude in our one-bed room, your tranquil retreat for focused stu
     <!-- jQuery -->
     <script
       src="js/jquery-3.7.1.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Bootstrap Core JS -->
     <script
       src="js/bootstrap.bundle.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Daterangepikcer JS -->
     <script
       src="js/moment.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
     <script
       src="js/daterangepicker.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Feather Icon JS -->
     <script
       src="js/feather.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Slimscroll JS -->
     <script
       src="js/jquery.slimscroll.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
-    ></script>
-
-    <!-- Datatable JS -->
-    <script
-      src="js/jquery.dataTables.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
-    ></script>
-    <script
-      src="js/dataTables.bootstrap5.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Select2 JS -->
     <script
       src="js/select2.min.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
+    ></script>
+
+    <!-- Summernote JS -->
+    <script
+      src="js/summernote-lite.min.js"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
+    ></script>
+
+    <!-- Datetimepicker JS -->
+    <script
+      src="js/moment.js"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
+    ></script>
+    <script
+      src="js/bootstrap-datetimepicker.min.js"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
+    ></script>
+
+    <!-- Bootstrap Tagsinput JS -->
+    <script
+      src="js/bootstrap-tagsinput.js"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <!-- Custom JS -->
     <script
       src="js/script.js"
-      type="e8479a4e05f3cfa769588570-text/javascript"
+      type="c648ffbe968e3bc626f22bcb-text/javascript"
     ></script>
 
     <script
       src="js/rocket-loader.min.js"
-      data-cf-settings="e8479a4e05f3cfa769588570-|49"
+      data-cf-settings="c648ffbe968e3bc626f22bcb-|49"
       defer=""
     ></script>
   </body>
