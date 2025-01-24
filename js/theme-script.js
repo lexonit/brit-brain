@@ -263,9 +263,6 @@
                 <div class="col-6">
                     <a href="#" id="resetbutton" class="btn btn-light close-theme w-100">Reset</a>
                 </div>
-                <div class="col-6">
-                    <a href="https://1.envato.market/52Ndo"  target="_blank" class="btn btn-primary w-100" >Buy Now</a>
-                </div>
             </div>
         </div>
         </div>

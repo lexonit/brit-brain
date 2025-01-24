@@ -1,6 +1,6 @@
 /*
 Author       : Dreamguys
-Template Name: Preskool - Bootstrap Admin Template
+Template Name: Lexon IT - Admin 
 */
 
 
